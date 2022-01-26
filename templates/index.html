@@ -119,6 +119,11 @@
         <script>
             function getBotResponse() {
             var rawText = $("#textInput").val();
+            if (rawText == "exit" || rawText == "Exit")
+            {
+                location.reload();
+
+            }
             var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
             $("#textInput").val("");
             $("#chatbox").append(userHtml);
